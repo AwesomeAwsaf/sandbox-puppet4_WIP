@@ -1,0 +1,46 @@
+{
+  "nodes": {
+    "puppet-master": {
+      ":box": "ubuntu/trusty64",
+      ":hostname": "puppet.awezone.com",
+      ":ip": "10.10.10.10",
+      ":fwdguest1": "8140",
+      ":fwdhost1": "8140",
+      ":fwdguest2": "8443",
+      ":fwdhost2": "8443",
+      ":fwdguest3": "3000",
+      ":fwdhost3": "3000",
+      ":portid1": "puppetport",
+      ":portid2": "foreman",
+      ":portid3": "foremangui",
+      ":ram": "1024",
+      ":bootstrap": "scripts/bootstrap-master.sh",
+      ":cpu": "2",
+      ":msg": "this is the puppet master"
+    },
+   "node01": {
+      ":box": "ubuntu/trusty64",
+      ":hostname": "node1-ubuntu.awezone.com",
+      ":ip": "10.10.10.11",
+      ":fwdguest1": "80",
+      ":fwdhost1": "8880",
+      ":portid1": "webserver1",
+      ":ram": "512",
+      ":bootstrap": "scripts/bootstrap-node.sh",
+      ":cpu": "1",
+      ":msg": "this is node1 server"
+    },
+    "node02": {
+      ":box": "nrel/CentOS-6.5-x86_64",
+      ":hostname": "node2-centos.awezone.com",
+      ":ip": "10.10.10.12",
+      ":fwdguest1": "80",
+      ":fwdhost1": "8800",
+      ":portid1": "webserver2",
+      ":ram": "256",
+      ":bootstrap": "scripts/bootstrap-node.sh",
+      ":cpu": "1",
+      ":msg": "this is node2 server"
+    }
+  }
+}

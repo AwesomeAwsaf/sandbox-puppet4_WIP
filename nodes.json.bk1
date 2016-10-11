@@ -1,0 +1,57 @@
+{
+  "nodes": {
+    "puppet-master": {
+      ":box": "ubuntu/trusty64",
+      ":hostname": "puppet.AweZone.com",
+      ":ip": "10.10.10.10",
+      ":fwdguest1": "8140",
+      ":fwdhost1": "8140",
+      ":portid1": "puppetport",
+      ":ram": "512",
+      ":bootstrap": "bootstrap-master.sh",
+      ":cpu": "2",
+      ":msg": "this is the puppet master"
+    },
+    "windows2k8": {
+      ":box": "win2008r2x64",
+      ":hostname": "node3-windows",
+      ":ip": "10.10.10.15",
+      ":fwdguest1": "3389",
+      ":fwdhost1": "33389",
+      ":portid1": "rdp",
+      ":fwdguest2": "22",
+      ":fwdhost2": "2222",
+      ":portid2": "ssh",
+      ":ram": "2048",
+      ":gui": "true",
+      ":bootstrap": "scripts/bootstrap-windows.ps1",
+      ":cpu": "2",
+      ":guestos": "windows",
+      ":msg": "this is the windows server"
+    },
+      "node01": {
+      ":box": "geerlingguy/ubuntu1404",
+      ":hostname": "node1-ubuntu.AweZone.com",
+      ":ip": "10.10.10.11",
+      ":fwdguest1": "80",
+      ":fwdhost1": "8880",
+      ":portid1": "webserver1",
+      ":ram": "256",
+      ":bootstrap": "bootstrap-node.sh",
+      ":cpu": "1",
+      ":msg": "this is node1 server"
+    },
+    "node02": {
+      ":box": "geerlingguy/centos7",
+      ":hostname": "node2-centos.AweZone.com",
+      ":ip": "10.10.10.12",
+      ":fwdguest1": "80",
+      ":fwdhost1": "8800",
+      ":portid1": "webserver2",
+      ":ram": "256",
+      ":bootstrap": "bootstrap-node.sh",
+      ":cpu": "1",
+      ":msg": "this is node2 server"
+    }
+  }
+}

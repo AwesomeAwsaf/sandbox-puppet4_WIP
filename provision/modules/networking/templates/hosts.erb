@@ -1,0 +1,14 @@
+127.0.0.1       localhost
+#127.0.1.1       <%= @fqdn %>
+
+10.10.10.10 puppet.<%= @domain %> puppet puppet-master
+10.10.10.11 node1-ubuntu.<%= @domain %> node1-ubuntu node1
+10.10.10.12 node2-centos.<%= @domain %> node2-centos node2
+10.10.10.15 node3-windows.<%= @domain %> node3-windows node3
+
+# The following lines are desirable for IPv6 capable hosts
+# ::1     localhost ip6-localhost ip6-loopback
+# fe00::0 ip6-localnet
+# ff00::0 ip6-mcastprefix
+# ff02::1 ip6-allnodes
+# ff02::2 ip6-allrouters
